@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+
+<body>
+
+<h1>Student Details</h1>
+
+<div id="output"></div>
+
+<script>
+    var students = [
+    {
+        name: "John",
+        r_num: "UR13CS129",
+        dob: 1995
+    },
+    {
+        name: "Joseph",
+        r_num: "UR13CS130",
+        dob: 1998
+    },
+    {
+        name: "David",
+        r_num: "UR13CS131",
+        dob: 2002
+    }
+];
+
+for (var i = 0; i < students.length; i++) {
+
+    document.getElementById("output").innerHTML +=
+        students[i].name + "'s Register Number is " +
+        students[i].r_num + "<br>";
+
+    if (students[i].dob < 2000) {
+
+        document.getElementById("output").innerHTML +=
+            "Born before 2000<br><br>";
+    }
+    else {
+
+        document.getElementById("output").innerHTML +=
+            "Born after 2000<br><br>";
+    }
+}
+</script>
+
+</body>
+</html>
